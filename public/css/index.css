@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand&display=swap');
+
+
+body {
+    margin: 0;
+    background-color: #ecf0f1;
+    font-family: 'Quicksand', sans-serif;
+}
+
+h1{
+    font-size: 55px;
+}
+
+.text {
+    overflow: hidden;
+    text-align: center;
+    padding: 2.5%;
+    font-size: 25px;
+}
+
+.header{
+    position: relative;
+    text-align: right;
+}
+
+.header ul{
+    position: absolute;
+    top: 10px;
+    right: 35px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+}
+
+.header ul li {
+    float: right;
+
+}
+
+li a:hover {
+    transition: 500ms;
+    background-color: rgba(17, 17, 17, 0.42);
+}
+
+.active {
+    background-color: #4CAF50;
+}
+.header li a{
+    transition: 500ms;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.splashcontent{
+    color:white;
+    padding: 150px;
+
+}
+
+.splashcontent text{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.splashcontent#first {
+    text-align: left;
+    background-image: url("/assets/splash1.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.splashcontent#second{
+    text-align: right;
+    background-image: url("/assets/splash2.jpg");
+    background-size: cover;
+}
+
+.splashcontent#third{
+    text-align: left;
+    background-image: url("/assets/splash3.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+p {
+    margin: 0;
+    text-overflow: ellipsis;
+    font-size: 22px;
+}
+
+.content{
+    overflow: hidden;
+    padding: 2.5%;
+    font-size: 25px;
+}
+
+
+.banner {
+    text-align: center;
+    background-image: url("/assets/frontpic1.png");
+    background-size: cover;
+    background-position: center;
+    -webkit-box-shadow: 7px 7px 10px -7px rgba(0,0,0,0.20);
+    -moz-box-shadow: 7px 7px 10px -7px rgba(0,0,0,0.20);
+    box-shadow: 7px 7px 10px -7px rgba(0,0,0,0.20);
+    text-shadow: 1px 1px rgba(0,0,0,0.65);
+    color: white;
+}
+
+.banner-content{
+    padding: 7.5%;
+    text-align: center;
+}
+
+.items{
+    overflow-x:hidden;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.item{
+    text-align: left;
+    position: relative;
+    overflow:hidden;
+    padding: 30px;
+    transition: 0.5s;
+    margin: 10px;
+    display: inline-block;
+    width: 30rem;
+    height: 15rem;
+    background-color: white;
+    border-radius: 8px;
+    -webkit-box-shadow: 7px 7px 10px -7px rgba(0,0,0,0.15);
+    -moz-box-shadow: 7px 7px 10px -7px rgba(0,0,0,0.15);
+    box-shadow: 7px 7px 10px -7px rgba(0,0,0,0.15);
+}
+
+.item:hover{
+    transition: 0.5s;
+    -webkit-box-shadow: 7px 7px 10px -7px rgba(0,0,0,0.55);
+    -moz-box-shadow: 7px 7px 10px -7px rgba(0,0,0,0.55);
+    box-shadow: 7px 7px 10px -7px rgba(0,0,0,0.55);
+}
+
+.footer{
+    text-align: center;
+    padding: 20px;
+    background-color: rgb(91,135,49);
+    color: white;
+}
+
+@media (max-width: 600px){
+    .item{
+        width: 85%;
+        height: 20rem;
+        padding: 15px;
+    }
+
+    .splashcontent{
+        padding: 50px;
+    }
+}
+
+form input{
+    padding: 9px;
+    margin-bottom: 10px;
+    border-style: solid;
+    border-color: rgb(216, 216, 216);
+    border-width: 2px;
+    border-radius: 5px;
+}
+
+form textarea{
+    padding: 9px;
+    margin-bottom: 10px;
+    border-style: solid;
+    border-color: rgb(216, 216, 216);
+    border-width: 2px;
+    border-radius: 5px;
+}
+
+form input:focus, textarea:focus{
+    transition: 0.5s;
+
+    border-color: rgb(209, 175, 4);
+    outline: none;
+}
+
+button{
+    transition: 0.5s;
+
+    padding: 8px 10px 8px 10px;
+
+    color: white;
+    border: none;
+    border-style: solid;
+    border-color: rgb(91,135,49);
+    border-radius: 7px;
+    cursor: pointer;
+    background-color: rgba(91,135,49,0.92);
+    margin-top: 20px;
+
+    -webkit-box-shadow: 0px 0px 10px 5px rgba(91,135,49, 0.90);
+    -moz-box-shadow: 0px 0px 10px 5px rgba(91,135,49, 0.90);
+    box-shadow: 0px 0px 10px 5px rgba(91,135,49, 0.90);
+
+}
+
+button:hover{
+    transition: 0.7s;
+    -webkit-box-shadow: 0px 0px 10px 5px rgba(91,135,49, 0.30);
+    -moz-box-shadow: 0px 0px 10px 5px rgba(91,135,49, 0.30);
+    box-shadow: 0px 0px 10px 5px rgba(91,135,49, 0.30);
+
+
+}
+
+button:focus{
+    outline: none;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+
