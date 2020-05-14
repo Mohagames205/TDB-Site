@@ -22,17 +22,17 @@
                     @foreach($bans as $ban)
                         <thead class="thead-light">
                         <tr>
-                            <th>
+                            <th colspan="2">
                                 {{ $ban->player }}
                             </th>
-                            <td colspan="2">
+                            <th>
 
                                 <a href=" {{ route("hk.bans") }}" onclick="event.preventDefault(); deleteRequest('{{ $ban->player }}')"><span class="fas fa-trash" aria-hidden="true"></span></a>
                                 <form method="post" id="deleteform{{ $ban->player }}" action="{{ route("hk.bans") . "/" .  $ban->player }}" style="outline: hidden;">
                                     @method("delete")
                                     @csrf
                                 </form>
-                            </td>
+                            </th>
 
                         </tr>
                         </thead>
