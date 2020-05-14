@@ -58,7 +58,7 @@ class ApplyController extends Controller
         $mail = $app->applystatus_id === "1" ? new ApprovedApplication($app) : new RejectedApplication($app);
 
         Mail::to($app->user->email)
-            ->cc("mohamedelyousfi87@gmail.com")
+            ->cc(\request()->user()->email)
             ->send($mail);
 
         return redirect(route("hk.applies"));
