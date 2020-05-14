@@ -12,7 +12,6 @@
                 <table class="table">
                     <thead class="thead-dark">
                     <tr>
-                        <th>Spelernaam</th>
                         <th>Bantijd</th>
                         <th>Reden</th>
                         <th>Gebanned door</th>
@@ -23,18 +22,21 @@
                     @foreach($bans as $ban)
                         <thead class="thead-light">
                         <tr>
-                            <th colspan="4">
+                            <th>
+                                {{ $ban->player }}
+                            </th>
+                            <td colspan="2">
+
                                 <a href=" {{ route("hk.bans") }}" onclick="event.preventDefault(); deleteRequest('{{ $ban->player }}')"><span class="fas fa-trash" aria-hidden="true"></span></a>
                                 <form method="post" id="deleteform{{ $ban->player }}" action="{{ route("hk.bans") . "/" .  $ban->player }}" style="outline: hidden;">
                                     @method("delete")
                                     @csrf
                                 </form>
-                            </th>
+                            </td>
 
                         </tr>
                         </thead>
                         <tr>
-                            <td>{{ $ban->player }}</td>
                             <td><b>{{ $ban->getTime()["days"] }}</b> dagen <b>{{ $ban->getTime()["hours"] }}</b> uren <b>{{ $ban->getTime()["minutes"] }}</b> minuten <b>{{ $ban->getTime()["seconds"] }}</b> seconden</td>
                             <td>{{ $ban->reason }}</td>
                             <td> {{ $ban->staff }}</td>
