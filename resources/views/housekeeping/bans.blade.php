@@ -58,8 +58,8 @@
         function deleteRequest(playername)
         {
             Swal.fire({
-                title: 'Bent u zeker?',
-                text: "U kan deze actie niet ongedaan maken!",
+                title: 'Opgepast!',
+                text: "Wilt u " + playername + " echt unbannen?",
                 icon: 'warning',
                 showCancelButton: true,
                 confirmButtonColor: '#3085d6',

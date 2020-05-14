@@ -5,7 +5,7 @@
             <meta name="viewport" content="width=device-width, initial-scale=1">
             <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
             <link href="/css/index.css" type="text/css" rel="stylesheet">
-            <title>TDB Minetopia</title>
+            <title>TDB Life</title>
         </head>
         <body>
             <div class="banner">
@@ -17,7 +17,7 @@
                     </ul>
                 </div>
                 <div class="banner-content">
-                    <h1>TDB Minetopia</h1>
+                    <h1>TDB Life</h1>
                     <p>De beste MCBE NL reallife roleplaying server!</p>
                     <button onclick="window.open('minecraft://?addExternalServer=TDBNetwork|play.tdbnetwork.nl:19132')">Join de server!</button>
                 </div>
@@ -71,13 +71,7 @@
             </div>
 
         <div class="footer">
-            <p>TDB Minetopia | Deze website is met liefde ontwikkelt door <a href="https://mohamedelyousfi.me">Mohamed</a></p>
+            <p>TDB Life | Deze website is met liefde ontwikkelt door <a href="https://mohamedelyousfi.me">Mohamed</a></p>
         </div>
         </body>
-
-<script>
-    function notAvailable(){
-        swal("Soon!", "Deze functie is nog niet beschikbaar!", "error");
-    }
-</script>
     </html>

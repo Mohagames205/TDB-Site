@@ -35,6 +35,10 @@ Route::get("/hk/sollicitaties", "HouseKeepingController@applies")->name("hk.appl
 
 Route::get("/hk/bans", "HouseKeepingController@bans")->name("hk.bans");
 
+Route::get("/vote", function(){
+    return redirect("https://minecraftpocket-servers.com/server/96284/vote/");
+});
+
 Route::put("/hk/sollicitaties/{app}", "ApplyController@edit");
 
 Route::delete("/hk/sollicitaties/{app}", "ApplyController@delete");

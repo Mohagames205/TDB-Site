@@ -14,6 +14,7 @@
             <table class="table">
                 <thead class="thead-dark">
                 <tr>
+                    <th>Spelernaam</th>
                     <th>Functie</th>
                     <th>Staff opmerking</th>
                     <th></th>
@@ -22,11 +23,10 @@
                 </thead>
                 <div class="accordion" id="accordionExample">
                     <tbody>
-
                     @foreach($applications as $application)
                         <thead class="thead-light">
                         <tr>
-                            <th colspan="2">
+                            <th colspan="3">
                                 Solliciatie #{{ $application->id }}  <span class="badge badge-{{ $application->applystatus->color }}">{{ $application->applystatus->change_text }}</span>
                             </th>
                             <th>
@@ -39,6 +39,7 @@
                         </tr>
                         </thead>
                         <tr>
+                            <td> {{$application->user->name }}</td>
                             <td>{{ $application->functie }}</td>
                             <td>{{ $application->staffopmerking ?? "Nog geen opmerking" }}</td>
 
@@ -47,7 +48,7 @@
                                 </button></td>
                         </tr>
                         <tr>
-                            <td colspan="3">
+                            <td colspan="4">
                                 <div id="collapse{{ $application->id }}" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
                                     <h4>Motivatie</h4>
                                     <p>{{ $application->motivatie }}</p>
@@ -55,6 +56,8 @@
                                     <p>{{ $application->waaromjij }}</p>
                                     <h4>Ervaring</h4>
                                     <p> {{ $application->ervaring }}</p>
+                                    <h4>Email</h4>
+                                    <p> {{ $application->user->email }} </p>
                                     <hr>
                                     <form id="change" action=" {{ route("hk.applies") . "/".  $application->id }}" method="POST">
                                         @method("PUT")
@@ -91,6 +94,7 @@
             <table class="table">
                 <thead class="thead-dark">
                 <tr>
+                    <th>Spelernaam</th>
                     <th>Functie</th>
                     <th>Staff opmerking</th>
                     <th></th>
@@ -103,7 +107,7 @@
                     @foreach($processedapplies as $application)
                         <thead class="thead-light">
                         <tr>
-                            <th colspan="2">
+                            <th colspan="3">
                                 Solliciatie #{{ $application->id }}  <span class="badge badge-{{ $application->applystatus->color }}">{{ $application->applystatus->change_text }}</span>
                             </th>
                             <th>
@@ -117,6 +121,7 @@
                         </tr>
                         </thead>
                         <tr>
+                            <td> {{ $application->user->name }}</td>
                             <td>{{ $application->functie }}</td>
                             <td>{{ $application->staffopmerking ?? "Nog geen opmerking" }}</td>
 
@@ -125,7 +130,7 @@
                                 </button></td>
                         </tr>
                         <tr>
-                            <td colspan="3">
+                            <td colspan="4">
                                 <div id="collapsep{{ $application->id }}" class="collapse" aria-labelledby="headingOne" data-parent="#processedApplies">
                                     <h4>Motivatie</h4>
                                     <p>{{ $application->motivatie }}</p>
@@ -133,8 +138,8 @@
                                     <p>{{ $application->waaromjij }}</p>
                                     <h4>Ervaring</h4>
                                     <p> {{ $application->ervaring }}</p>
-
-
+                                    <h4>Email</h4>
+                                    <p> {{ $application->user->email }} </p>
                                     <hr>
                                     <form id="change" action=" {{ route("hk.applies") . "/".  $application->id }}" method="POST">
                                         @method("PUT")

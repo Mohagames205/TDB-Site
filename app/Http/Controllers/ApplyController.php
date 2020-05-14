@@ -3,8 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Application;
+use App\Mail\ApprovedApplication;
+use App\Mail\RejectedApplication;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class ApplyController extends Controller
 {
@@ -51,6 +54,13 @@ class ApplyController extends Controller
         $app->applystatus_id = \request("change");
         $app->staffopmerking = \request("staffopmerking");
         $app->save();
+
+        $mail = $app->applystatus_id === "1" ? new ApprovedApplication($app) : new RejectedApplication($app);
+
+        Mail::to($app->user->email)
+            ->cc("mohamedelyousfi87@gmail.com")
+            ->send($mail);
+
         return redirect(route("hk.applies"));
     }
 

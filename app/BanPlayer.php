@@ -7,10 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 class BanPlayer extends Model
 {
     public $connection = "mysql2";
-    public $table = "banplayers";
+    public $table = "banPlayers";
     public $primaryKey = "player";
     public $incrementing = false;
-
     protected $keyType = 'string';
 
 

@@ -25,6 +25,7 @@
                     <option name="moderator">Moderator</option>
                     <option name="builder">Builder</option>
                     <option name="eventmanager">Eventmanager</option>
+                    <option name="pr">Public Relations</option>
                     <option name="developer">Developer</option>
                 </select>
             </div>
