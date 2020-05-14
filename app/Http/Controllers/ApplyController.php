@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Application;
 use App\Mail\ApprovedApplication;
+use App\Mail\ReceivedApplication;
 use App\Mail\RejectedApplication;
 use App\User;
 use Illuminate\Http\Request;
@@ -44,6 +45,9 @@ class ApplyController extends Controller
         $app->ervaring = $request->get("ervaring");
         $app->waaromjij = $request->get("waaromjij");
         $app->save();
+
+        Mail::to($request->user()->email)
+            ->send(new ReceivedApplication($app));
 
         return redirect("/home");
 
