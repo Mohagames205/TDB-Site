@@ -34,6 +34,7 @@ class ReceivedApplication extends Mailable
      */
     public function build()
     {
-        return $this->view('emails.receivedapplication');
+        return $this->view('emails.receivedapplication')
+            ->subject("TDB Sollicitatie ontvangen");
     }
 }
