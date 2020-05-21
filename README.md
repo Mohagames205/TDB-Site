@@ -6,3 +6,4 @@ Dit is de source code van de officiële TDB Network website.
 * Solliciteren
 * Banlogs
 * Server info
+* Live plotlijst
