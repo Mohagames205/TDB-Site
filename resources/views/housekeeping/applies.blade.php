@@ -56,6 +56,10 @@
                                     <p> {{ $application->ervaring }}</p>
                                     <h4>Waarom jij?</h4>
                                     <p>{{ $application->waaromjij }}</p>
+                                    @if($application->opmerking)
+                                        <h4>Opmerking</h4>
+                                        <p> {{ $application->opmerking }}</p>
+                                    @endif
                                     <h4>Email</h4>
                                     <p>{{ $application->user->email}} </p>
                                     <h4>Discord</h4>
@@ -140,6 +144,10 @@
                                     <p> {{ $application->ervaring }}</p>
                                     <h4>Waarom jij?</h4>
                                     <p>{{ $application->waaromjij }}</p>
+                                    @if($application->opmerking)
+                                        <h4>Opmerking</h4>
+                                        <p> {{ $application->opmerking }}</p>
+                                    @endif
                                     <h4>Email</h4>
                                     <p>{{ $application->user->email}} </p>
                                     <h4>Discord</h4>
