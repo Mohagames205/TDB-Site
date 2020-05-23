@@ -14,7 +14,7 @@
                             Verbannen spelers
                         </div>
                         <div class="card-body">
-                            <h3> TEST </h3>
+                            <h3> {{ $bans }} </h3>
                         </div>
                     </div>
                 </div>
@@ -24,7 +24,7 @@
                             Online spelers
                         </div>
                         <div class="card-body">
-                            <h3> TEST </h3>
+                            <h3> {{ $onlinePlayers }} </h3>
                         </div>
                     </div>
                 </div>
@@ -34,7 +34,7 @@
                             Unieke spelers
                         </div>
                         <div class="card-body">
-                            <h3> TEST </h3>
+                            <h3> idk </h3>
                         </div>
                     </div>
                 </div>
