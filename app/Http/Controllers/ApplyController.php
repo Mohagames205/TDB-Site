@@ -46,6 +46,7 @@ class ApplyController extends Controller
         $app->ervaring = $request->get("ervaring");
         $app->waaromjij = $request->get("waaromjij");
         $app->discord = $request->get("discord");
+        $app->opmerking = $request->get("opmerking");
         $app->save();
 
         Mail::to($request->user()->email)

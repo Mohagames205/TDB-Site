@@ -45,6 +45,10 @@
                 <label for="exampleFormControlTextarea1">Waarom moeten wij precies jou kiezen?</label>
                 <textarea name="waaromjij" class="form-control" id="exampleFormControlTextarea1" rows="3" required></textarea>
             </div>
+            <div class="form-group">
+                <label for="opmerkingField">Opmerkingen</label>
+                <textarea name="opmerking" class="form-control" id="opmerkingField" rows="2"></textarea>
+            </div>
             <button type="submit" class="btn btn-primary">Solliciteer</button>
         </form>
     </div>
