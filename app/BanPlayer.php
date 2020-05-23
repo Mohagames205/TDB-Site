@@ -26,4 +26,10 @@ class BanPlayer extends Model
 
         return ["days" => $day, "hours" => $hour, "minutes" => $minute, "seconds" => $second];
     }
+
+    public static function getCount()
+    {
+        return self::all()->count();
+
+    }
 }
