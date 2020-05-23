@@ -19,8 +19,9 @@ class HouseKeepingController extends Controller
 
     public function index()
     {
-        $host = env("MCSERVER_HOST");
-        $port = env("MCSERVER_PORT");
+        $host = env("MCSERVER_HOST", "5.199.143.143");
+        $port = env("MCSERVER_PORT", 19145);
+
         try {
                 $onlinePlayers = self::getServerInfo($host, $port)["Players"];
         } catch (\Exception $e) {
