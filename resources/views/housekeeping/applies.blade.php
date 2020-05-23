@@ -52,12 +52,14 @@
                                 <div id="collapse{{ $application->id }}" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
                                     <h4>Motivatie</h4>
                                     <p>{{ $application->motivatie }}</p>
-                                    <h4>Waarom jij?</h4>
-                                    <p>{{ $application->waaromjij }}</p>
                                     <h4>Ervaring</h4>
                                     <p> {{ $application->ervaring }}</p>
+                                    <h4>Waarom jij?</h4>
+                                    <p>{{ $application->waaromjij }}</p>
                                     <h4>Email</h4>
-                                    <p> {{ $application->user->email }} </p>
+                                    <p>{{ $application->user->email}} </p>
+                                    <h4>Discord</h4>
+                                    <p>{{ $application->discord }}</p>
                                     <hr>
                                     <form id="change" action=" {{ route("hk.applies") . "/".  $application->id }}" method="POST">
                                         @method("PUT")
@@ -134,12 +136,14 @@
                                 <div id="collapsep{{ $application->id }}" class="collapse" aria-labelledby="headingOne" data-parent="#processedApplies">
                                     <h4>Motivatie</h4>
                                     <p>{{ $application->motivatie }}</p>
-                                    <h4>Waarom jij?</h4>
-                                    <p>{{ $application->waaromjij }}</p>
                                     <h4>Ervaring</h4>
                                     <p> {{ $application->ervaring }}</p>
+                                    <h4>Waarom jij?</h4>
+                                    <p>{{ $application->waaromjij }}</p>
                                     <h4>Email</h4>
-                                    <p> {{ $application->user->email }} </p>
+                                    <p>{{ $application->user->email}} </p>
+                                    <h4>Discord</h4>
+                                    <p>{{ $application->discord }}</p>
                                     <hr>
                                     <form id="change" action=" {{ route("hk.applies") . "/".  $application->id }}" method="POST">
                                         @method("PUT")

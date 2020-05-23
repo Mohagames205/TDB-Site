@@ -6,6 +6,7 @@
     <div class="container">
         <form method="post">
             @csrf
+            <div class="form-group">
             <div class="row">
                 <div class="form-group col">
                     <label for="exampleFormControlInput1">Email address</label>
@@ -13,11 +14,14 @@
                 </div>
                 <div class="form-group col">
                     <label for="exampleFormControlInput1">Username</label>
-                    <input type="username" class="form-control" id="exampleFormControlInput1" name="username" placeholder="{{ Auth::user()->name }}" readonly>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" name="username" placeholder="{{ Auth::user()->name }}" readonly>
                 </div>
             </div>
-
-
+            </div>
+            <div class="form-group">
+                <label for="discordusername">Discord#tag</label>
+                <input type="text" class="form-control" id="discordusername" name="discord" placeholder="naam#0002">
+            </div>
             <div class="form-group">
                 <label for="exampleFormControlSelect1">Functie</label>
                 <select class="form-control" id="exampleFormControlSelect1" name="functie" required>
