@@ -36,6 +36,7 @@ class ApplyController extends Controller
             "motivatie" => "required",
             "ervaring" => "required",
             "waaromjij" => "required",
+            "discord" => "required"
         ]);
 
         $app = new Application();
