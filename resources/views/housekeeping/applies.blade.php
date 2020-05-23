@@ -59,13 +59,13 @@
                                     <h4>Email</h4>
                                     <p>{{ $application->user->email}} </p>
                                     <h4>Discord</h4>
-                                    <p>{{ $application->discord }}</p>
+                                    <p>{{ $application->discord  ?? "Geen discord opgegeven"}}</p>
                                     <hr>
                                     <form id="change" action=" {{ route("hk.applies") . "/".  $application->id }}" method="POST">
                                         @method("PUT")
                                         @csrf
 
-                                        <input type="text" name="staffopmerking"><br><br>
+                                        <textarea type="text" name="staffopmerking" rows="4" cols="35" placeholder="Een opmerking..."></textarea><br><br>
 
                                         <button type="submit"  value="1"  name="change" class="btn btn-outline-success">Aannemen</button>
 
@@ -143,13 +143,13 @@
                                     <h4>Email</h4>
                                     <p>{{ $application->user->email}} </p>
                                     <h4>Discord</h4>
-                                    <p>{{ $application->discord }}</p>
+                                    <p>{{ $application->discord ?? "Geen discord opgegeven"}}</p>
                                     <hr>
                                     <form id="change" action=" {{ route("hk.applies") . "/".  $application->id }}" method="POST">
                                         @method("PUT")
                                         @csrf
 
-                                        <input type="text" name="staffopmerking"><br><br>
+                                        <textarea type="text" name="staffopmerking" rows="4" cols="35" placeholder="Een opmerking..."></textarea><br><br>
 
                                         <button type="submit"  value="1"  name="change" class="btn btn-outline-success">Aannemen</button>
 
@@ -182,8 +182,6 @@
                 confirmButtonText: 'Verwijderen!'
             }).then((result) => {
                 if (result.value) {
-                    console.log(id);
-                    console.log("deleteform" + id);
                     document.getElementById('deleteform' + id).submit();
                 }
             })
