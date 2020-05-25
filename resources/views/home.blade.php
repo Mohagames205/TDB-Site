@@ -57,11 +57,11 @@
                      <td colspan="3">
                          <div id="collapse{{ $application->id }}" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
                              <h4>Motivatie</h4>
-                             <p>{{ $application->motivatie }}</p>
+                             <p style="white-space: pre-wrap;">{{ $application->motivatie }}</p>
                              <h4>Ervaring</h4>
-                             <p> {{ $application->ervaring }}</p>
+                             <p style="white-space: pre-wrap;">{{ $application->ervaring }}</p>
                              <h4>Waarom jij?</h4>
-                             <p>{{ $application->waaromjij }}</p>
+                             <p style="white-space: pre-wrap;">{{ $application->waaromjij }}</p>
                              <h4>Opmerking</h4>
                              <p> {{ $application->opmerking ?? "Geen opmerking" }}</p>
                          </div>
