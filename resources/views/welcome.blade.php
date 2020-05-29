@@ -244,7 +244,7 @@
             </div>
 
         <div class="footer">
-            <p>TDB Life | Deze website is met liefde ontwikkelt door <a href="https://mohamedelyousfi.me">Mohamed</a></p>
+            <p>TDB Life | Deze website is met ❤ ontwikkelt door <a href="https://mohamedelyousfi.me">Mohamed</a></p>
         </div>
         </body>
     </html>
