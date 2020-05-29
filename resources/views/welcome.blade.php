@@ -5,6 +5,17 @@
             <meta name="viewport" content="width=device-width, initial-scale=1">
             <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
             <link href="/css/index.css" type="text/css" rel="stylesheet">
+            <!-- Global site tag (gtag.js) - Google Analytics -->
+            <script src="{{ asset("js/consent.js") }}" type="text/javascript" async="true"></script>
+            <script async src="https://www.googletagmanager.com/gtag/js?id=UA-167986749-1"></script>
+            <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+
+                gtag('config', 'UA-167986749-1');
+            </script>
+
             <title>TDB Life</title>
         </head>
         <body>
