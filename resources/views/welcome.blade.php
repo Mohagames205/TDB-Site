@@ -230,7 +230,7 @@
             <div class="splashcontent" id="second">
                 <div class="content">
                     <h2>Discord server</h2>
-                    <p>Join nu onze discord server en maak een babbel met medespelers!</p>
+                    <p>Join nu onze discord server en babbel gezellig mee!</p>
                     <button onclick="window.open('/discord')">Discord</button>
                 </div>
             </div>
