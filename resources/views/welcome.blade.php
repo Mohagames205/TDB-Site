@@ -1,11 +1,6 @@
 <!DOCTYPE html>
     <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
         <head>
-            <meta charset="utf-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1">
-            <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-            <link href="/css/index.css" type="text/css" rel="stylesheet">
-            <!-- Global site tag (gtag.js) - Google Analytics -->
             <!-- Quantcast Choice. Consent Manager Tag v2.0 (for TCF 2.0) -->
             <script type="text/javascript" async=true>
                 (function() {
@@ -169,6 +164,11 @@
                 })();
             </script>
             <!-- End Quantcast Choice. Consent Manager Tag v2.0 (for TCF 2.0) -->
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+            <link href="/css/index.css" type="text/css" rel="stylesheet">
+            <!-- Global site tag (gtag.js) - Google Analytics -->
             <script async src="https://www.googletagmanager.com/gtag/js?id=UA-167986749-1"></script>
             <script>
                 window.dataLayer = window.dataLayer || [];
