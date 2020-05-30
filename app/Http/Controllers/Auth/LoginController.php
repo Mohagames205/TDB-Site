@@ -56,6 +56,9 @@ class LoginController extends Controller
             ->with(['Content-Type' => 'application/x-www-form-urlencoded'])
             ->user();
 
+
+        dd($user->getName());
+
         $user = User::firstOrCreate([
             "email" => $user->getEmail()
         ],
@@ -66,7 +69,7 @@ class LoginController extends Controller
             "discord_id" => $user->id
         ]);
 
-        dd($user->getName());
+
 
         Auth::login($user);
 
