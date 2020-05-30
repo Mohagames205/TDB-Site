@@ -60,7 +60,7 @@ class LoginController extends Controller
             "email" => $user->getEmail()
         ],
         [
-            "name" => $user->username,
+            "name" => $user->getName(),
             "email" => $user->getEmail(),
             "password" => Hash::make(Str::random(24)),
             "discord_id" => $user->id
