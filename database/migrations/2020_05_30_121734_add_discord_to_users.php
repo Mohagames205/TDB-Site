@@ -14,7 +14,7 @@ class AddDiscordToUsers extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->string("discord_id")->nullable();
+            $table->string("discord_token")->nullable();
         });
     }
 
@@ -26,7 +26,7 @@ class AddDiscordToUsers extends Migration
     public function down()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn("discord_id");
+            $table->dropColumn("discord_token");
         });
     }
 }

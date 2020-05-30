@@ -52,24 +52,22 @@ class LoginController extends Controller
 
     public function handleProviderCallback()
     {
-        $user = Socialite::driver('discord')
+        $dcuser = Socialite::driver('discord')
             ->with(['Content-Type' => 'application/x-www-form-urlencoded'])
             ->user();
 
-
-        //dd($user->getName());
-
         $user = User::firstOrCreate([
-            "email" => $user->getEmail()
+            "email" => $dcuser->getEmail()
         ],
         [
-            "name" => $user->getName(),
-            "email" => $user->getEmail(),
+            "name" => $dcuser->getName(),
+            "email" => $dcuser->getEmail(),
             "password" => Hash::make(Str::random(24)),
-            "discord_id" => $user->id
+            "discord_token" => $dcuser->token
         ]);
 
-
+        $user->discord_token = $dcuser->token;
+        $user->save();
 
         Auth::login($user);
 
