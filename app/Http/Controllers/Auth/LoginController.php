@@ -57,7 +57,7 @@ class LoginController extends Controller
             ->user();
 
 
-        dd($user->getName());
+        //dd($user->getName());
 
         $user = User::firstOrCreate([
             "email" => $user->getEmail()
