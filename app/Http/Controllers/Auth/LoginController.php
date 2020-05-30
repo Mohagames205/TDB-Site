@@ -56,7 +56,18 @@ class LoginController extends Controller
             ->with(['Content-Type' => 'application/x-www-form-urlencoded'])
             ->user();
 
-        dd($user);
+        $user = User::firstOrCreate([
+            "email" => $user->getEmail()
+        ],
+        [
+            "name" => $user->username,
+            "email" => $user->getEmail(),
+            "password" => Hash::make(Str::random(24)),
+            "discord_id" => $user->id
+        ]);
 
+        Auth::login($user);
+
+        return redirect(route("home"));
     }
 }
