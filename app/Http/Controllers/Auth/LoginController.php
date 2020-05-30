@@ -66,6 +66,8 @@ class LoginController extends Controller
             "discord_id" => $user->id
         ]);
 
+        dd($user->getName());
+
         Auth::login($user);
 
         return redirect(route("home"));
