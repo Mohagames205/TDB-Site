@@ -8,6 +8,7 @@ use App\Mail\ReceivedApplication;
 use App\Mail\RejectedApplication;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
 
 class ApplyController extends Controller
@@ -20,7 +21,7 @@ class ApplyController extends Controller
 
     public function index()
     {
-        return view("apply");
+        return view("apply", ["discord" => Socialite::driver('discord')->userFromToken(Auth::user()->discord_token)->username ?? "eennaam#0000"]);
     }
 
     public function create(Request $request)

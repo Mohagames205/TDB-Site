@@ -20,7 +20,7 @@
             </div>
             <div class="form-group">
                 <label for="discordusername">Discord</label>
-                <input type="text" class="form-control" id="discordusername" name="discord" placeholder="username#0000" required>
+                <input type="text" class="form-control" id="discordusername" name="discord" placeholder="{{ $discord }}" required>
             </div>
             <div class="form-group">
                 <label for="exampleFormControlSelect1">Functie</label>
