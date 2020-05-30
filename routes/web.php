@@ -52,3 +52,8 @@ Route::get("/discord", function(){
 Route::get("/shop", function(){
     return redirect("https://store.tdbnetwork.nl");
 })->name("shop");
+
+
+Route::get('login/discord', 'Auth\LoginController@redirectToProvider');
+
+Route::get('login/discord/callback', 'Auth\LoginController@handleProviderCallback');
