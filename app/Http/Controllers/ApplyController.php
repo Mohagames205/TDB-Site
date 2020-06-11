@@ -22,7 +22,7 @@ class ApplyController extends Controller
 
     public function index()
     {
-        return view("apply", ["discord" => Socialite::driver('discord')->userFromToken(Auth::user()->discord_token)->nickname ?? ""]);
+        return view("apply", ["discord" => "workinprogress#0001"]);
     }
 
     public function create(Request $request)
