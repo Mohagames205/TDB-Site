@@ -8,7 +8,9 @@ use App\Mail\ReceivedApplication;
 use App\Mail\RejectedApplication;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
+use Laravel\Socialite\Facades\Socialite;
 
 class ApplyController extends Controller
 {
@@ -20,7 +22,7 @@ class ApplyController extends Controller
 
     public function index()
     {
-        return view("apply");
+        return view("apply", ["discord" => "workinprogress#0001"]);
     }
 
     public function create(Request $request)

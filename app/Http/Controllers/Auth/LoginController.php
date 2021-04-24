@@ -4,7 +4,12 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
+use App\User;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
+use Laravel\Socialite\Facades\Socialite;
 
 class LoginController extends Controller
 {
@@ -36,5 +41,36 @@ class LoginController extends Controller
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
+    }
+
+
+    public function redirectToProvider()
+    {
+        return Socialite::driver('discord')->redirect();
+    }
+
+
+    public function handleProviderCallback()
+    {
+        $dcuser = Socialite::driver('discord')
+            ->with(['Content-Type' => 'application/x-www-form-urlencoded'])
+            ->user();
+
+        $user = User::firstOrCreate([
+            "email" => $dcuser->getEmail()
+        ],
+        [
+            "name" => $dcuser->getName(),
+            "email" => $dcuser->getEmail(),
+            "password" => Hash::make(Str::random(24)),
+            "discord_token" => $dcuser->token
+        ]);
+
+        $user->discord_token = $dcuser->token;
+        $user->save();
+
+        Auth::login($user);
+
+        return redirect(route("home"));
     }
 }
