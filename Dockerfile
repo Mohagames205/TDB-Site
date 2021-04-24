@@ -43,8 +43,6 @@ COPY . /var/www
 # Copy existing application directory permissions
 COPY --chown=www:www . /var/www
 
-RUN cp .env.example .env
-
 RUN php artisan key:generate
 
 # Change current user to www
